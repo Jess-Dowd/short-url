@@ -77,7 +77,7 @@ function genhash() {
     // req.setRequestHeader("Content-Type", "application/json");
     // req.setRequestHeader("X-Master-Key", "$2b$10$awI5kl/9orunGmcpE2WBo.AjejhUK5Ml0nyHSKLm.tDWhwH30whUK");
 //     // req.send( { "url": this.url } );
-}
+// }
 
 let req = new XMLHttpRequest();
 
@@ -95,6 +95,7 @@ let req = new XMLHttpRequest();
 
     	
     req.send('{"sample": "Hello World"}');
+    
 
 function shorturl() {
     var longurl = geturl();
