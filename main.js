@@ -58,6 +58,8 @@ function send_request(url) {
     req.open("POST", "https://api.jsonbin.io/v3/b", true);
     req.setRequestHeader("Content-Type", "application/json");
     req.setRequestHeader("X-Master-Key", masterKey);
+    req.setRequestHeader("X-Collection-Id", "<6161a0689548541c29c0bb9c>");
+    
 
     	
     req.send('{"sample": "Hello World"}');
