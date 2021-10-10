@@ -28,25 +28,38 @@ function genhash() {
 
 function send_request(url) {
     this.url = url;
-    var link = "https://api.jsonbin.io/v3/b";
+    // var link = "https://api.jsonbin.io/v3/b";
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", link);
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("POST", link);
 
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("X-Master-key", "$2b$10$awI5kl/9orunGmcpE2WBo.AjejhUK5Ml0nyHSKLm.tDWhwH30whUK");
+    // xhr.setRequestHeader("Content-Type", "application/json");
+    // xhr.setRequestHeader("X-Master-key", "$2b$10$awI5kl/9orunGmcpE2WBo.AjejhUK5Ml0nyHSKLm.tDWhwH30whUK");
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            console.log(xhr.status);
-            console.log(xhr.responseText);
-        }
-    };
+    // xhr.onreadystatechange = function () {
+    //     if (xhr.readyState === 4) {
+    //         console.log(xhr.status);
+    //         console.log(xhr.responseText);
+    //     }
+    // };
 
-    var data = JSON.stringify(this.url);
+    // xhr.send(this.url);
 
-    xhr.send(data);
-
+    var settings = {
+        "url": "https://api.jsonbin.io/v3/b",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "X-Master-key": "$2b$10$awI5kl/9orunGmcpE2WBo.AjejhUK5Ml0nyHSKLm.tDWhwH30whUK",
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify(this.url),
+      };
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+    
     // $.ajax({
     //     'url': 'https://api.jsonbin.io/v3/b',
     //     'type': 'POST',
