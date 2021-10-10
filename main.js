@@ -79,7 +79,14 @@ function genhash() {
 //     // req.send( { "url": this.url } );
 // }
 
-let req = new XMLHttpRequest();
+
+
+
+function shorturl() {
+    var longurl = geturl();
+    genhash();
+    // send_request(longurl);
+    let req = new XMLHttpRequest();
 
     req.onreadystatechange = () => {
         if (req.readyState == XMLHttpRequest.DONE) {
@@ -95,12 +102,6 @@ let req = new XMLHttpRequest();
 
     	
     req.send('{"sample": "Hello World"}');
-    
-
-function shorturl() {
-    var longurl = geturl();
-    genhash();
-    send_request(longurl);
 }
 
 var hashh = window.location.hash.substr(1)
