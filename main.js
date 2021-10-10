@@ -52,7 +52,7 @@ function send_request(url) {
     req.onreadystatechange = () => {
         if (req.readyState == XMLHttpRequest.DONE) {
             console.log(req.responseText);
-        }
+        } else console.log("errorrr")
     };
 
     req.open("POST", "https://api.jsonbin.io/v3/b", true);
@@ -79,6 +79,22 @@ function send_request(url) {
 //     // req.send( { "url": this.url } );
 }
 
+let req = new XMLHttpRequest();
+
+    req.onreadystatechange = () => {
+        if (req.readyState == XMLHttpRequest.DONE) {
+            console.log(req.responseText);
+        } else console.log("errorrr2")
+    };
+
+    req.open("POST", "https://api.jsonbin.io/v3/b", true);
+    req.setRequestHeader("Content-Type", "application/json");
+    req.setRequestHeader("X-Master-Key", masterKey);
+    req.setRequestHeader("X-Collection-Id", "<6161a0689548541c29c0bb9c>");
+    
+
+    	
+    req.send('{"sample": "Hello World"}');
 
 function shorturl() {
     var longurl = geturl();
