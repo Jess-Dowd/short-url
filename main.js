@@ -96,7 +96,7 @@ function shorturl() {
 
     req.open("POST", "https://api.jsonbin.io/v3/b", true);
     req.setRequestHeader("Content-Type", "application/json");
-    req.setRequestHeader("X-Master-Key", masterKey);
+    req.setRequestHeader("X-Master-Key", '$2b$10$awI5kl/9orunGmcpE2WBo.AjejhUK5Ml0nyHSKLm.tDWhwH30whUK');
     req.setRequestHeader("X-Collection-Id", "6161a0689548541c29c0bb9c");
     
 
