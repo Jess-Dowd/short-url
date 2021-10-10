@@ -51,7 +51,7 @@ function send_request(url) {
     req.open("POST", "https://api.jsonbin.io/v3/b", true);
     req.setRequestHeader("Content-Type", "application/json");
     req.setRequestHeader("X-Master-Key", "$2b$10$awI5kl/9orunGmcpE2WBo.AjejhUK5Ml0nyHSKLm.tDWhwH30whUK");
-    req.send(JSON.stringify(this.url));
+    req.send( { "url": this.url } );
 }
 
 
