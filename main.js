@@ -45,24 +45,24 @@ function genhash() {
 //     })
 // }
 
-function send_request(url) {
-    this.url = url;
-    let req = new XMLHttpRequest();
+// function send_request(url) {
+//     this.url = url;
+//     let req = new XMLHttpRequest();
 
-    req.onreadystatechange = () => {
-        if (req.readyState == XMLHttpRequest.DONE) {
-            console.log(req.responseText);
-        } else console.log("errorrr")
-    };
+//     req.onreadystatechange = () => {
+//         if (req.readyState == XMLHttpRequest.DONE) {
+//             console.log(req.responseText);
+//         } else console.log("errorrr")
+//     };
 
-    req.open("POST", "https://api.jsonbin.io/v3/b", true);
-    req.setRequestHeader("Content-Type", "application/json");
-    req.setRequestHeader("X-Master-Key", masterKey);
-    req.setRequestHeader("X-Collection-Id", "<6161a0689548541c29c0bb9c>");
+//     req.open("POST", "https://api.jsonbin.io/v3/b", true);
+//     req.setRequestHeader("Content-Type", "application/json");
+//     req.setRequestHeader("X-Master-Key", masterKey);
+//     req.setRequestHeader("X-Collection-Id", "<6161a0689548541c29c0bb9c>");
     
 
     	
-    req.send('{"sample": "Hello World"}');
+//     req.send('{"sample": "Hello World"}');
 
 
     // let req = new XMLHttpRequest();
@@ -90,7 +90,7 @@ let req = new XMLHttpRequest();
     req.open("POST", "https://api.jsonbin.io/v3/b", true);
     req.setRequestHeader("Content-Type", "application/json");
     req.setRequestHeader("X-Master-Key", masterKey);
-    req.setRequestHeader("X-Collection-Id", "<6161a0689548541c29c0bb9c>");
+    req.setRequestHeader("X-Collection-Id", "6161a0689548541c29c0bb9c");
     
 
     	
