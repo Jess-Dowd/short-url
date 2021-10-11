@@ -6,7 +6,9 @@ A simple URL shortener built with HTML5, CSS3, Javascript, and REST API
 
 Create an account at https://jsonbin.io/ to get an API key to contribute
 
+Demo https://jess-dowd.github.io/short-url/
 
+enter a very long link and click the enter button. A shortened link will be generated in the box.
 
 #returns randomly generated short URL
 
