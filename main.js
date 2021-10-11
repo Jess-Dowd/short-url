@@ -74,7 +74,7 @@ if (window.location.hash != "") {
             console.log(req.responseText);
             var data = (JSON.parse(req.responseText)); 
             console.log(data.record.longUrl)
-            // window.location.href = data.record.longUrl;
+            window.location.href = data.record.longUrl;
         }
     };
 
