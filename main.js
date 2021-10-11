@@ -12,7 +12,8 @@ function geturl() {
 
 ////generate a random variable 
 function getrandom() {
-    var text = "";
+    
+    var text = "?#" + "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
     for (var i = 0; i < 5; i++)
@@ -20,12 +21,18 @@ function getrandom() {
     return text;
 }
 
-////add variable to the enpoint url
-function genhash() {
-    if (window.location.hash == "") {
-        window.location.hash = getrandom();
-    }
+function genLink() {
+    var result = document.getElementById("result");
+    var newtext = getrandom()
+    result.value = "https://jess-dowd.github.io/short-url/" + newtext;
 }
+
+// ////add variable to the enpoint url
+// function genhash() {
+//     if (window.location.hash == "") {
+//         window.location.hash = getrandom();
+//     }
+// }
 
 ////send the input url data to the server and assign id
 function send_request(url, hash) {
@@ -52,7 +59,7 @@ function send_request(url, hash) {
 ////get long url, create small url, send data to server
 function shorturl() {
     var longurl = geturl();
-    genhash();
+    genLink();
     send_request(longurl);
 }
 

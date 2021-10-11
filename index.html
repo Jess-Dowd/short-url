@@ -4,9 +4,24 @@
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
-        <input type="url" id="urlinput">
-        <button onclick="shorturl()">Shorten The URL</button>
+        <div class="center">
+            <h1>URL Shortener</h1>
+            <form>
+              <div class="inputbox">
+                <input type="text" id="urlinput" required="required" class="input">
+                <span>Paste Link</span>
+              </div>
+              <div class="inputbox">
+                <input class="input" disabled type="text" id="result">
+                <span></span>
+              </div>
+              <div class="inputbox box">
+                <button onclick="shorturl()" class="input button">Click here to shorten The URL</button>
+              </div>
+            </form>
+          </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="main.js"></script>
     </body>
 </html>
+
