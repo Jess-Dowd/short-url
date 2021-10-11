@@ -8,15 +8,14 @@
             <h1>URL Shortener</h1>
             <form>
               <div class="inputbox">
-                <input type="text" id="urlinput" required="required" class="input">
+                <input type="url" id="urlinput" required="required" class="input">
                 <span>Paste Link</span>
               </div>
               <div class="inputbox">
                 <input class="input" disabled type="text" id="result">
-                <span></span>
               </div>
               <div class="inputbox box">
-                <button onclick="shorturl()" class="input button">Click here to shorten The URL</button>
+                <input class="input button" value="Enter" type="button" onclick="shorturl();"/>
               </div>
             </form>
           </div>
